@@ -2,15 +2,19 @@
 #include<iostream>
 using namespace std;
 
-inline void showname()
+inline float calculateSI(float p, float t, float r)
 {
-	cout<<"Repeatative loop\n";
+	return p*t*r/100;
 }
 
 int main()
 {
-	for (int i = 0; i < 5; i++)
+	float t = 1.0;
+	float r = 10;
+	cout<<"P\tT\tR\tSI\n";
+	for (float p = 1000; p <= 5000; p = p + 1000)
 	{
-		showname();
+		cout<<p<<"\t"<<t<<"\t"<<r<<"\t"<<calculateSI(p,t,r)<<endl;
     }
+    return 0;
 }
